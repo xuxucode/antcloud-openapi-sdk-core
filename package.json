@@ -1,0 +1,58 @@
+{
+  "name": "@alipay/antcloud-openapi-sdk-core",
+  "version": "1.1.2",
+  "description": "AntCloud OpenAPI Node.js SDK Core",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run lint && mocha  --reporter spec test/*.test.js",
+    "test-local": "mocha  --reporter spec test/*.test.js",
+    "lint": "eslint --fix lib",
+    "ci": "npm run lint && npm run test-cov",
+    "test-cov": "istanbul cover --report html ./node_modules/.bin/_mocha --  --reporter spec test/*.test.js"
+  },
+  "keywords": [
+    "AntCloud",
+    "OpenAPI",
+    "SDK",
+    "Core"
+  ],
+  "author": "Chi Yuan",
+  "license": "MIT",
+  "dependencies": {
+    "json-bigint": "^0.2.3",
+    "urllib": "^2.27.0",
+    "uuid": "^3.2.1"
+  },
+  "files": [
+    "lib",
+    "index.js"
+  ],
+  "devDependencies": {
+    "autod": "^3.0.1",
+    "co-mocha": "^1.1.3",
+    "chai": "~3.4.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "eslint": "^4.18.2",
+    "eslint-config-egg": "^7.0.0",
+    "mm": "^2.2.0",
+    "mz-modules": "^2.1.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.alipay-inc.com/jingyang.cjy/antcloud-nodejs-sdk.git"
+  },
+  "bugs": {
+    "url": "https://gitlab.alipay-inc.com/jingyang.cjy/antcloud-nodejs-sdk/issues"
+  },
+  "engines": {
+    "node": ">= 8.0.0"
+  },
+  "homepage": "https://gitlab.alipay-inc.com/jingyang.cjy/antcloud-nodejs-sdk#readme"
+}
