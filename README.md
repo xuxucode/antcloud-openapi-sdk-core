@@ -1,9 +1,9 @@
-欢迎使用金融云NodeJS SDK
+欢迎使用金融云NodeJS SDK，基于官方 @alipay/antcloud-openapi-sdk-core@1.1.2 版本发布。
 
 ## 安装
 
 ```
-$ tnpm install @alipay/antcloud-openapi-sdk-core@latest -S
+$ npm install antcloud-openapi-sdk
 ```
 
 ## SDK使用
@@ -12,8 +12,8 @@ $ tnpm install @alipay/antcloud-openapi-sdk-core@latest -S
 2. 创建request对象，填充请求参数。
 3. 调用Client类的execute方法，获取响应结果。
 
-```javascript
-const AntCloudClient = require('@alipay/antcloud-openapi-sdk-core');
+```js
+const AntCloudClient = require('antcloud-openapi-sdk');
 
 // 创建Client实例
 const client = new AntCloudClient({
@@ -46,8 +46,8 @@ client.execute(request, opt).then((resp) => {
 
 ### utils 方法
 
-```
-const { utils } = require('@alipay/antcloud-openapi-sdk-core');
+```js
+const { utils } = require('antcloud-openapi-sdk');
 
 // Exp: 构造响应成功的response字符串（更多 util 方法见 lib/utils.js）
 utils.buildSuccessResponseStr({ req_msg_id: '0645762ea89c49438f38a2c991dfdf13' });
